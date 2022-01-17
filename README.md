@@ -20,6 +20,9 @@ Read through the [Implementing request handlers](https://developer.amazon.com/en
 - HelpIntentHandler.java
 - SessionEndedRequestHandler.java
 
+#### Implementing the SkillStreamHandler
+This step has already been done for you in `HelloWorldStreamHandler.java`
+
 ## Building Your Skill
 Open the Visual Studio Code _Command Pallete_ (`Ctrl` + `Shift` + `P`) and select _Tasks: Run Build Task_ to build a jar file for your skill.
 - The jar file will be output to the project directory with the name _alexa-skill-demo.jar_
