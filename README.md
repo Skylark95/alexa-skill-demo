@@ -32,7 +32,7 @@ Below is a modified version of the [Uploading your skill to AWS Lambda](https://
 
 1. If you do not already have an account on AWS, go to Amazon Web Services and create an account.
 1. Log in to the AWS Management Console and navigate to AWS Lambda.
-1. Click the region drop-down in the upper-right corner of the console and select one of the regions supported for Alexa skills: Asia Pacific (Tokyo), EU (Ireland), US East (N. Virginia), or US West (Oregon).
+1. Click the region drop-down in the upper-right corner of the console and select: US East (N. Virginia)
 1. If you have no Lambda functions yet, click Get Started Now. Otherwise, click Create function.
 1. Make sure to confirm that "Author from scratch" option is selected.
 1. Enter a Name for the function.
