@@ -7,6 +7,13 @@ import static com.amazon.ask.request.Predicates.intentName;
 
 import java.util.Optional;
 
+/**
+ * Intent handler for "AMAZON.HelpIntent".
+ * 
+ * <h4>AMAZON.HelpIntent</h4>
+ * Provides help about how to use the skill.
+ * Common Utterances: help, help me, can you help me
+ */
 public class HelpIntentHandler implements RequestHandler {
 
     @Override

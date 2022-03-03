@@ -7,6 +7,17 @@ import static com.amazon.ask.request.Predicates.intentName;
 
 import java.util.Optional;
 
+/**
+ * Intent handler for "AMAZON.StopIntent" and "AMAZON.CancelIntent".
+ * 
+ * <h4>AMAZON.StopIntent</h4>
+ * Exits the skill. Your skill must implement this intent and shouldEndSession must be true or null in the response.
+ * Common Utterances: stop, off, shut up
+ * 
+ * <h4>AMAZON.CancelIntent</h4>
+ * Lets the user cancel a transaction or task (but remain in the skill) or Lets the user completely exit the skill.
+ * Common Utterances: cancel, never mind, forget it
+ */
 public class CancelandStopIntentHandler implements RequestHandler {
 
     @Override

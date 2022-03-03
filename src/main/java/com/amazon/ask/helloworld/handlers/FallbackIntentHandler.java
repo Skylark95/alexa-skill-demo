@@ -8,6 +8,14 @@ import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.intentName;
 
+/**
+ * Intent handler for "AMAZON.FallbackIntent".
+ * 
+ * <h4>AMAZON.FallbackIntent</h4>
+ * Provides a fallback for user utterances that do not match any of your skill's intents. 
+ * Your AMAZON.FallbackIntent handler can give the user more details on what your skill does and how they can interact with it.
+ * Common Utterances: Varies. This intent uses an out-of-domain model generated based on your interaction model.
+ */
 public class FallbackIntentHandler implements RequestHandler {
 
     @Override
