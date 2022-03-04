@@ -1,5 +1,10 @@
 # alexa-skill-demo-complete
 
+## Links
+- https://developer.amazon.com/en-US/docs/alexa/alexa-skills-kit-sdk-for-java/develop-your-first-skill.html
+- https://aws.amazon.com/
+- https://developer.amazon.com/
+
 ## Clone Repository
 Open Visual Studio Code and on the _Getting Started_ page use the _Clone Git Repository_ link and fill in the following URL:
 - https://github.com/Skylark95/alexa-skill-demo-complete.git

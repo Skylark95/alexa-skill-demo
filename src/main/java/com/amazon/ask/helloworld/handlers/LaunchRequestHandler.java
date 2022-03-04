@@ -8,6 +8,10 @@ import com.amazon.ask.request.Predicates;
 
 import java.util.Optional;
 
+/**
+ * Configure a handler to be invoked when the skill receives a LaunchRequest. 
+ * The LaunchRequest event occurs when the skill is invoked without a specific intent.
+ */
 public class LaunchRequestHandler implements RequestHandler {
 
     @Override
