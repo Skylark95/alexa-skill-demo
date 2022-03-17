@@ -35,11 +35,11 @@
 12. Click Clone repository. In the text prompt provide the url: https://github.com/Skylark95/alexa-skill-demo.git
 ![clone repository](img/clone_repository.png)
 
-### Build The Skill Code
+## Build The Skill Code
 13. Open the Visual Studio Code _Command Pallete_ (`Ctrl` + `Shift` + `P`) and select _Tasks: Run Build Task_ to build a jar file for your skill. The jar file will be output to the project directory with the name _alexa-skill-demo.jar_
 ![run build task](img/run_build_task.png)
 
-### Upload the Jar File to your Function
+## Upload the Jar File to your Function
 16. Upload the JAR file produced in the previous step under Function code.
 ![upload jar](img/upload_jar.png)
 
