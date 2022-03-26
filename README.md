@@ -1,39 +1,45 @@
 # Alexa Skill Demo
 
-## Creating The Skill Function in AWS Lambda
-1. Log in to the AWS Management Console and navigate to AWS Lambda by searching for it in the search bar.\
+To view the steps from last session click [here](https://github.com/Skylark95/alexa-skill-demo/blob/2022-03-18/README.md)
+
+## Add an Alexa Skills Kit trigger
+1. Log in to the AWS Management Console and navigate to AWS Lambda\
 ![lambda](img/lambda.png)
 
-2. Click **Create function.**\
-![create function](img/create_function.png)
+2. Click your function in the list to open the configuration details
 
-3. Make sure to confirm that "Author from scratch" option is selected.\
-![author from scratch](img/author_from_scratch.png)
+3. Click **Add Trigger**\
+![add trigger](img/add-trigger.png)
 
-4. Enter a **Function Name** for the function.
-5. Select **Java 11 (Correto)** as the **Runtime**
-6. Select **x86_64** as the **Architecture**\
-![function page](img/function_page.png)
+3. Under add triggers, click **Alexa Skills Kit** to select the trigger.\
+![add trigger](img/add-trigger-2.png)
 
-7. Click on **Change default execution role** and select **Use an existing role**. In the Existing Role dropdown select **LabRole**\
-![select role](img/select_role.png)
+4. Under Configure triggers, select Enable for Skill ID verification.
 
-8. Click **Create function.**
+5. Make sure Skill ID verification is Enabled.
 
-9. Copy the **Function ARN** of your AWS Lambda and save it in a location mentioned during the class period.\
-![copy arn](img/copy_arn.png)
+6. Enter your Skill ID in the Skill ID edit box.
 
-10. Under **Runtime Settings** on the function page click **Edit**\
-![edit runtime](img/edit_runtime.png)
-10. Fill in the Handler information with fully qualified class name of your stream handler class (in our example this value will be `com.amazon.ask.helloworld.HelloWorldStreamHandler`)\
-![runtime settings](img/runtime_settings.png)
+7. Click **Add**.
+![alexa skills kit trigger](img/alexa-skills-kit.png)
+
+8. Go to the **Function ARN** Google Sheet and enter **yes** next to your group under the **Skill ID Added to Lambda**.
 
 ## Clone Repository
-11. Open Visual Studio Code click the **Source Control** Button.\
+9. Open Visual Studio Code click the **Source Control** Button.\
 ![source control button](img/source_control.png)
 
-12. Click Clone repository. In the text prompt provide the url: https://github.com/Skylark95/alexa-skill-demo.git\
+10. Click Clone repository. In the text prompt provide the url: https://github.com/Skylark95/alexa-skill-demo.git\
 ![clone repository](img/clone_repository.png)
+
+## Edit the Skill Code
+11. Click the **Explorer** Button.\
+![explorer](img/explorer.png)
+
+12. Expand the **src** and **handlers** directory and open `HelloWorldIntentHandler.java`\
+![hello world](img/hello-world.png)
+
+13. Edit the `speechText` in the `handle` method to say something unique for your group. Get creative. Don't just keep the standard `"Hello World"`, this will be what makes your skill unique for your group. Be sure to save the file when you are done.
 
 ## Build The Skill Code
 13. Open the Visual Studio Code _Command Pallete_ (`Ctrl` + `Shift` + `P`) and select _Tasks: Run Build Task_ to build a jar file for your skill. The jar file will be output to the project directory with the name _alexa-skill-demo.jar_\
@@ -43,7 +49,10 @@
 16. Upload the JAR file produced in the previous step under Function code.\
 ![upload jar](img/upload_jar.png)
 
-17. Congratulations! You're done for this session!
+17. Your code is now deployed. See a mentor and let's run your new Alexa Skill!
+
+## Bonus
+There is much more you can do. Below is a link to Amazon's documentation on Alexa skills. Check it out and see what else you can do!
 
 ## Resources
 - https://developer.amazon.com/en-US/docs/alexa/alexa-skills-kit-sdk-for-java/develop-your-first-skill.html
