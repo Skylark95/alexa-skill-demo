@@ -29,7 +29,7 @@ To view the steps from last session click [here](https://github.com/Skylark95/al
 9. Open Visual Studio Code click the **Source Control** Button.\
 ![source control button](img/source_control.png)
 
-10. Click Clone repository. In the text prompt provide the url: https://github.com/Skylark95/alexa-skill-demo.git\
+10. Click Clone repository. In the text prompt provide the url: https://github.com/Skylark95/alexa-skill-demo.git \
 ![clone repository](img/clone_repository.png)
 
 ## Edit the Skill Code
@@ -52,7 +52,8 @@ To view the steps from last session click [here](https://github.com/Skylark95/al
 17. Your code is now deployed. See a mentor and let's run your new Alexa Skill!
 
 ## Bonus
-There is much more you can do. Below is a link to Amazon's documentation on Alexa skills. Check it out and see what else you can do!
+- See if you can find the CloudWatch logs of your skill being called after it is run on the Echo Show.
+- There is much more you can do. Below is a link to Amazon's documentation on Alexa skills. Check it out and see what else you can do!
 
 ## Resources
 - https://developer.amazon.com/en-US/docs/alexa/alexa-skills-kit-sdk-for-java/develop-your-first-skill.html
