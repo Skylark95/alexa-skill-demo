@@ -2,9 +2,12 @@ package com.amazon.ask.helloworld.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
+import com.amazon.ask.model.IntentRequest;
 import com.amazon.ask.model.Response;
+import com.amazon.ask.model.Slot;
 import com.amazon.ask.request.Predicates;
 
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -19,7 +22,13 @@ public class HelloWorldIntentHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = "Hello world";
+        String speechText = "Whats Up?";
+        IntentRequest request = (IntentRequest) input.getRequest();
+        Map<String, Slot> slots = request.getIntent().getSlots();
+        Slot slot = slots.get("name");
+        if (slot != null && slot.getValue() != null) {
+            speechText = "Whats up " + slot.getValue() + "?";
+        }
         return input.getResponseBuilder()
                 .withSpeech(speechText)
                 .withSimpleCard("HelloWorld", speechText)
