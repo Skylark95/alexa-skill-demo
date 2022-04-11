@@ -1,59 +1,23 @@
 # Alexa Skill Demo
 
-To view the steps from last session click [here](https://github.com/Skylark95/alexa-skill-demo/blob/2022-03-18/README.md)
+To view the steps from last session click [here](https://github.com/Skylark95/alexa-skill-demo/blob/2022-04-01/README.md)
 
-## Add an Alexa Skills Kit trigger
-1. Log in to the AWS Management Console and navigate to AWS Lambda\
-![lambda](img/lambda.png)
+## Alexa Skill Slots
+Intents can optionally have arguments called slots. Slot values are extracted from utterances and sent with the intent request. Each slot has a `Variable Name` (The slot name as it will appear in the intent request to your skill) and a `Slot Type` (Defines how data in the slot is recognized and handled).
 
-2. Click your function in the list to open the configuration details
+Each group's skill has been given a slot with a variable name of `name`. This slot is of slot type `AMAZON.FirstName`.w
 
-3. Click **Add Trigger**\
-![add trigger](img/add-trigger.png)
+## Use the `name` skill slot
+For this session look into using the `name` slot added to your skill to have your skill greet people by name. Instead of this guide walking you through step by step you'll need to look at Amazon's JavaDoc to find out how to read the `name` slot value.
 
-4. Under add triggers, click **Alexa Skills Kit** to select the trigger.\
-![add trigger](img/add-trigger-2.png)
+The JavaDoc can be found at:
+- http://ask-sdk-java-javadocs.s3-website-us-west-2.amazonaws.com/
 
-5. Under Configure triggers, select Enable for Skill ID verification.
-
-6. Make sure Skill ID verification is Enabled.
-
-7. Enter your Skill ID in the Skill ID edit box.
-
-8. Click **Add**.
-![alexa skills kit trigger](img/alexa-skills-kit.png)
-
-9. Go to the **Function ARN** Google Sheet and enter **yes** next to your group under the **Skill ID Added to Lambda**.
-
-## Clone Repository
-10. Open Visual Studio Code click the **Source Control** Button.\
-![source control button](img/source_control.png)
-
-11. Click Clone repository. In the text prompt provide the url: https://github.com/Skylark95/alexa-skill-demo.git \
-![clone repository](img/clone_repository.png)
-
-## Edit the Skill Code
-12. Click the **Explorer** Button.\
-![explorer](img/explorer.png)
-
-13. Expand the **src** and **handlers** directory and open `HelloWorldIntentHandler.java`\
-![hello world](img/hello-world.png)
-
-14. Edit the `speechText` in the `handle` method to say something unique for your group. Get creative. Don't just keep the standard `"Hello World"`, this will be what makes your skill unique for your group. Be sure to save the file when you are done.
-
-## Build The Skill Code
-15. Open the Visual Studio Code _Command Pallete_ (`Ctrl` + `Shift` + `P`) and select _Tasks: Run Build Task_ to build a jar file for your skill. The jar file will be output to the project directory with the name _alexa-skill-demo.jar_\
-![run build task](img/run_build_task.png)
-
-## Upload the Jar File to your Function
-16. Upload the JAR file produced in the previous step under Function code.\
-![upload jar](img/upload_jar.png)
-
-17. Your code is now deployed. See a mentor and let's run your new Alexa Skill!
-
-## Bonus
-- See if you can find the CloudWatch logs of your skill being called after it is run on the Echo Show.
-- There is much more you can do. Below is a link to Amazon's documentation on Alexa skills. Check it out and see what else you can do!
+Here's a few hints:
+- The `handle` method of `HelloWorldIntentHandler` has an `input` argument.
+- We should be able to get an `IntentRequest` from the `input` (You may have to class cast)
+- The slots may be found on an `Intent`
 
 ## Resources
 - https://developer.amazon.com/en-US/docs/alexa/alexa-skills-kit-sdk-for-java/develop-your-first-skill.html
+- http://ask-sdk-java-javadocs.s3-website-us-west-2.amazonaws.com/
